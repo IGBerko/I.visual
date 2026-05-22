@@ -1,0 +1,37 @@
+plugins {
+    id 'eclipse'
+    id 'idea'
+    id 'maven-publish'
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+}
+
+group = 'ru.itry.ivisual'
+version = '1.0'
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(17)
+}
+
+minecraft {
+    mappings channel: 'official', version: '1.20.1'
+
+    runs {
+        client {
+            workingDirectory project.file('run')
+
+            mods {
+                ivisual {
+                    source sourceSets.main
+                }
+            }
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.20.1-47.2.0'
+}
