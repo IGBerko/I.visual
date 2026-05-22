@@ -1,0 +1,11 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="ivisual"
+version="1.0"
+displayName="I.visual"
+description='''
+Visual mod for Minecraft
+'''
